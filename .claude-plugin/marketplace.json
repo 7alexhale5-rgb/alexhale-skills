@@ -1,0 +1,14 @@
+{
+  "name": "agent-skills",
+  "owner": {
+    "name": "Alex Hale"
+  },
+  "description": "Original, source-checked agent skills. Free tier only; every listing here is work we own outright.",
+  "plugins": [
+    {
+      "name": "regression-test",
+      "source": "./plugins/regression-test",
+      "description": "Manage golden dataset regression tests for LLM prompts using Promptfoo. Commands \u2014 init, add, run, report. Use when user says \"regression\", \"golden dataset\", \"prompt regression\", \"eval run\", \"test my prompts\", or after shipping prompt changes."
+    }
+  ]
+}
