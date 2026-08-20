@@ -174,4 +174,3 @@ If your agent harness supports hooks or a pre-commit step, put the run there. A 
 | .promptfoo/ directory | Not initialized | Prompt: `/regression-test init` |
 | Golden datasets | No .yaml files | Skip with note: "No golden tests — add with `/regression-test add`" |
 | Results directory | Missing | Create on first `run` |
-
