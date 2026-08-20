@@ -44,6 +44,26 @@ There are good skills for authoring and running a single promptfoo eval, includi
 promptfoo themselves. This one is for the other job: keeping the set, committing it, and reading
 the drift between runs.
 
+### See it before you build your own set
+
+[`example/`](example/) is a recorded three-run walkthrough. Two lines get added to a support
+bot's prompt to make it warmer; two unrelated rules quietly break; a third case never moves, which
+is how you can tell what actually changed.
+
+```
+case                          run 1        run 2        run 3
+------------------------------------------------------------
+refund-window                  PASS         PASS         PASS
+two-sentence-limit             PASS         FAIL         PASS
+unknown-stays-unknown          PASS         FAIL         PASS
+------------------------------------------------------------
+passing                         3/3          1/3          3/3
+exit                              0     non-zero            0
+```
+
+It runs on your machine with no API key and no model download, and that table is printed from the
+result files rather than typed.
+
 Needs [promptfoo](https://promptfoo.dev): `npm install -g promptfoo`.
 
 ## Why the list is short

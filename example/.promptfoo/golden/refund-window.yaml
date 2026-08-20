@@ -1,0 +1,7 @@
+# The control. It should stay green through every prompt change, and it does.
+- description: "refund-window"
+  vars:
+    user_input: "How many days do I have for a refund?"
+  assert:
+    - type: contains
+      value: "30 days"

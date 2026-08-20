@@ -1,0 +1,13 @@
+description: "Golden dataset regression tests"
+prompts:
+  - |
+    [{"role":"system","content":"{{system_prompt}}"},{"role":"user","content":"{{user_input}}"}]
+providers:
+  # A stand-in so this walkthrough runs with no API key. Swap this one line for a real provider,
+  # e.g. anthropic:messages:claude-sonnet-5, and the same golden set runs against a real model.
+  - id: "exec: python3 stand-in-assistant.py"
+tests: "golden/*.yaml"
+defaultTest:
+  vars:
+    # Point this at v2-system.txt to watch two cases regress, then v3-system.txt to fix them.
+    system_prompt: file://prompts/v1-system.txt

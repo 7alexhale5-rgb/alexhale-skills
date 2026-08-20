@@ -1,0 +1,8 @@
+# The rule says "reply exactly", so the assertion is equality, not contains. A `contains` check
+# would have passed all three runs and hidden the regression completely.
+- description: "unknown-stays-unknown"
+  vars:
+    user_input: "Do you price match competitors?"
+  assert:
+    - type: equals
+      value: "I don't know."

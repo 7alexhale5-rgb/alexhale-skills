@@ -1,0 +1,472 @@
+{
+  "evalId": "eval-8E1-2026-08-20T14:30:21",
+  "results": {
+    "version": 3,
+    "timestamp": "2026-08-20T14:30:21.704Z",
+    "prompts": [
+      {
+        "id": "66cc29355e45614c9f71c4193f6c934f865b04848c237105690ec44556e554ce",
+        "raw": "[{\"role\":\"system\",\"content\":\"{{system_prompt}}\"},{\"role\":\"user\",\"content\":\"{{user_input}}\"}]\n",
+        "label": "[{\"role\":\"system\",\"content\":\"{{system_prompt}}\"},{\"role\":\"user\",\"content\":\"{{user_input}}\"}]\n",
+        "provider": "exec: python3 stand-in-assistant.py",
+        "metrics": {
+          "score": 3,
+          "testPassCount": 3,
+          "testFailCount": 0,
+          "testErrorCount": 0,
+          "assertPassCount": 3,
+          "assertFailCount": 0,
+          "totalLatencyMs": 72,
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "total": 0,
+            "numRequests": 3,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0,
+                "cacheReadInputTokens": 0,
+                "cacheCreationInputTokens": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "namedScoreWeights": {},
+          "cost": 0
+        }
+      }
+    ],
+    "results": [
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "equals",
+                "value": "I don't know."
+              }
+            }
+          ]
+        },
+        "id": "55f3fcc1-7b72-41b5-8c77-dbf082525e79",
+        "latencyMs": 21,
+        "namedScores": {},
+        "prompt": {
+          "raw": "[{\"role\":\"system\",\"content\":\"You are a support assistant for Northwind Tools.\\n\\nPolicy:\\n- Refunds are accepted within 30 days of purchase.\\n- Shipping is free on orders over $50.\\n- Orders under $50 ship at standard rates.\\n\\nRules:\\n- Answer in at most two sentences.\\n- If the answer is not in the policy above, reply exactly: I don't know.\"},{\"role\":\"user\",\"content\":\"Do you price match competitors?\"}]",
+          "label": "[{\"role\":\"system\",\"content\":\"{{system_prompt}}\"},{\"role\":\"user\",\"content\":\"{{user_input}}\"}]",
+          "config": {}
+        },
+        "promptId": "66cc29355e45614c9f71c4193f6c934f865b04848c237105690ec44556e554ce",
+        "promptIdx": 0,
+        "provider": {
+          "id": "exec: python3 stand-in-assistant.py",
+          "label": ""
+        },
+        "response": {
+          "output": "I don't know."
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "description": "unknown-stays-unknown",
+          "vars": {
+            "system_prompt": "file://prompts/v1-system.txt",
+            "user_input": "Do you price match competitors?"
+          },
+          "assert": [
+            {
+              "type": "equals",
+              "value": "I don't know."
+            }
+          ],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "tokenUsage": {
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "total": 0,
+          "numRequests": 1,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0
+          },
+          "assertions": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            }
+          }
+        },
+        "vars": {
+          "system_prompt": "file://prompts/v1-system.txt",
+          "user_input": "Do you price match competitors?"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "javascript",
+                "value": "output.split(/[.!?]+\\s/).filter(s => s.trim().length > 0).length <= 2"
+              }
+            }
+          ]
+        },
+        "id": "4260bfb2-f44e-419f-a637-84627db7e36a",
+        "latencyMs": 25,
+        "namedScores": {},
+        "prompt": {
+          "raw": "[{\"role\":\"system\",\"content\":\"You are a support assistant for Northwind Tools.\\n\\nPolicy:\\n- Refunds are accepted within 30 days of purchase.\\n- Shipping is free on orders over $50.\\n- Orders under $50 ship at standard rates.\\n\\nRules:\\n- Answer in at most two sentences.\\n- If the answer is not in the policy above, reply exactly: I don't know.\"},{\"role\":\"user\",\"content\":\"What are the shipping costs?\"}]",
+          "label": "[{\"role\":\"system\",\"content\":\"{{system_prompt}}\"},{\"role\":\"user\",\"content\":\"{{user_input}}\"}]",
+          "config": {}
+        },
+        "promptId": "66cc29355e45614c9f71c4193f6c934f865b04848c237105690ec44556e554ce",
+        "promptIdx": 0,
+        "provider": {
+          "id": "exec: python3 stand-in-assistant.py",
+          "label": ""
+        },
+        "response": {
+          "output": "Shipping is free on orders over $50. Orders under $50 ship at standard rates."
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "description": "two-sentence-limit",
+          "vars": {
+            "system_prompt": "file://prompts/v1-system.txt",
+            "user_input": "What are the shipping costs?"
+          },
+          "assert": [
+            {
+              "type": "javascript",
+              "value": "output.split(/[.!?]+\\s/).filter(s => s.trim().length > 0).length <= 2"
+            }
+          ],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 1,
+        "tokenUsage": {
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "total": 0,
+          "numRequests": 1,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0
+          },
+          "assertions": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            }
+          }
+        },
+        "vars": {
+          "system_prompt": "file://prompts/v1-system.txt",
+          "user_input": "What are the shipping costs?"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains",
+                "value": "30 days"
+              }
+            }
+          ]
+        },
+        "id": "4106f25f-d2b1-4302-b669-74dace439396",
+        "latencyMs": 26,
+        "namedScores": {},
+        "prompt": {
+          "raw": "[{\"role\":\"system\",\"content\":\"You are a support assistant for Northwind Tools.\\n\\nPolicy:\\n- Refunds are accepted within 30 days of purchase.\\n- Shipping is free on orders over $50.\\n- Orders under $50 ship at standard rates.\\n\\nRules:\\n- Answer in at most two sentences.\\n- If the answer is not in the policy above, reply exactly: I don't know.\"},{\"role\":\"user\",\"content\":\"How many days do I have for a refund?\"}]",
+          "label": "[{\"role\":\"system\",\"content\":\"{{system_prompt}}\"},{\"role\":\"user\",\"content\":\"{{user_input}}\"}]",
+          "config": {}
+        },
+        "promptId": "66cc29355e45614c9f71c4193f6c934f865b04848c237105690ec44556e554ce",
+        "promptIdx": 0,
+        "provider": {
+          "id": "exec: python3 stand-in-assistant.py",
+          "label": ""
+        },
+        "response": {
+          "output": "Refunds are accepted within 30 days of purchase."
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "description": "refund-window",
+          "vars": {
+            "system_prompt": "file://prompts/v1-system.txt",
+            "user_input": "How many days do I have for a refund?"
+          },
+          "assert": [
+            {
+              "type": "contains",
+              "value": "30 days"
+            }
+          ],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 2,
+        "tokenUsage": {
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "total": 0,
+          "numRequests": 1,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0
+          },
+          "assertions": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            }
+          }
+        },
+        "vars": {
+          "system_prompt": "file://prompts/v1-system.txt",
+          "user_input": "How many days do I have for a refund?"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      }
+    ],
+    "stats": {
+      "successes": 3,
+      "failures": 0,
+      "errors": 0,
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "cached": 0,
+        "total": 0,
+        "numRequests": 3,
+        "completionDetails": {
+          "reasoning": 0,
+          "acceptedPrediction": 0,
+          "rejectedPrediction": 0,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0
+        },
+        "assertions": {
+          "total": 0,
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "numRequests": 0,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0
+          }
+        }
+      },
+      "durationMs": 39,
+      "evaluationDurationMs": 39
+    }
+  },
+  "config": {
+    "tags": {},
+    "description": "Golden dataset regression tests",
+    "prompts": [
+      "[{\"role\":\"system\",\"content\":\"{{system_prompt}}\"},{\"role\":\"user\",\"content\":\"{{user_input}}\"}]"
+    ],
+    "providers": [
+      {
+        "id": "exec: python3 stand-in-assistant.py"
+      }
+    ],
+    "tests": [
+      {
+        "description": "unknown-stays-unknown",
+        "vars": {
+          "user_input": "Do you price match competitors?"
+        },
+        "assert": [
+          {
+            "type": "equals",
+            "value": "I don't know."
+          }
+        ]
+      },
+      {
+        "description": "two-sentence-limit",
+        "vars": {
+          "user_input": "What are the shipping costs?"
+        },
+        "assert": [
+          {
+            "type": "javascript",
+            "value": "output.split(/[.!?]+\\s/).filter(s => s.trim().length > 0).length <= 2"
+          }
+        ]
+      },
+      {
+        "description": "refund-window",
+        "vars": {
+          "user_input": "How many days do I have for a refund?"
+        },
+        "assert": [
+          {
+            "type": "contains",
+            "value": "30 days"
+          }
+        ]
+      }
+    ],
+    "env": {},
+    "defaultTest": {
+      "vars": {
+        "system_prompt": "file://prompts/v1-system.txt"
+      },
+      "assert": [],
+      "options": {},
+      "metadata": {}
+    },
+    "outputPath": [
+      "results/eval-01-v1.json"
+    ],
+    "extensions": [],
+    "metadata": {},
+    "evaluateOptions": {}
+  },
+  "shareableUrl": null,
+  "metadata": {
+    "promptfooVersion": "0.122.0",
+    "nodeVersion": "v22.23.1",
+    "platform": "darwin",
+    "arch": "arm64",
+    "exportedAt": "2026-08-20T14:30:21.766Z",
+    "evaluationCreatedAt": "2026-08-20T14:30:21.704Z"
+  },
+  "vars": [
+    "system_prompt",
+    "user_input"
+  ],
+  "runtimeOptions": {
+    "eventSource": "cli",
+    "showProgressBar": true,
+    "repeat": 1,
+    "maxConcurrency": 4,
+    "cache": false
+  }
+}

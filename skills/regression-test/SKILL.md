@@ -7,6 +7,10 @@ description: Manage golden dataset regression tests for LLM prompts using Prompt
 
 Manage golden test datasets for LLM prompt regression testing using Promptfoo. Ensures prompt changes don't degrade output quality.
 
+One eval tells you today's score. A kept set tells you what your change did. There is a recorded
+three-run walkthrough of exactly that, runnable with no API key, at
+https://github.com/7alexhale5-rgb/alexhale-skills/tree/main/example
+
 **Prerequisite:** `npm install -g promptfoo` (check with `which promptfoo`)
 
 ---

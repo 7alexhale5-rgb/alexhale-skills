@@ -1,0 +1,6 @@
+- description: "two-sentence-limit"
+  vars:
+    user_input: "What are the shipping costs?"
+  assert:
+    - type: javascript
+      value: "output.split(/[.!?]+\\s/).filter(s => s.trim().length > 0).length <= 2"
