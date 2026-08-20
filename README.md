@@ -1,12 +1,12 @@
-# Agent Skills
+# Alex Hale — Agent Skills
 
 Original agent skills, source-checked before release. This marketplace holds the free tier.
 
 ## Install
 
 ```
-/plugin marketplace add 7alexhale5-rgb/agent-skills
-/plugin install regression-test@agent-skills
+/plugin marketplace add 7alexhale5-rgb/alexhale-skills
+/plugin install regression-test@alexhale-skills
 ```
 
 Run `/reload-plugins` after an update.
