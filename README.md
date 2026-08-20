@@ -2,6 +2,8 @@
 
 Original agent skills, source-checked before release. This marketplace holds the free tier.
 
+[![skills.sh installs](https://skills.sh/b/7alexhale5-rgb/alexhale-skills)](https://skills.sh/7alexhale5-rgb/alexhale-skills/regression-test)
+
 ## Install
 
 As a Claude Code plugin:
