@@ -4,12 +4,24 @@ Original agent skills, source-checked before release. This marketplace holds the
 
 ## Install
 
+As a Claude Code plugin:
+
 ```
 /plugin marketplace add 7alexhale5-rgb/alexhale-skills
 /plugin install regression-test@alexhale-skills
 ```
 
 Run `/reload-plugins` after an update.
+
+Or with the `skills` CLI, which works across Claude Code, Cursor, Codex CLI, Gemini CLI and
+Copilot:
+
+```
+npx skills add 7alexhale5-rgb/alexhale-skills@regression-test
+```
+
+Both paths install the same file. The `skills/` and `plugins/` folders are generated from one
+source, so they cannot drift apart.
 
 ## What is here
 
