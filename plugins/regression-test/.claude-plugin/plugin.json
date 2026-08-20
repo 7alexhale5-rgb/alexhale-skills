@@ -1,7 +1,7 @@
 {
   "name": "regression-test",
   "description": "Manage golden dataset regression tests for LLM prompts using Promptfoo. Commands \u2014 init, add, run, report. Use when user says \"regression\", \"golden dataset\", \"prompt regression\", \"eval run\", \"test my prompts\", or after shipping prompt changes.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Alex Hale"
   },

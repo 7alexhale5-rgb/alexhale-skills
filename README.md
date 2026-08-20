@@ -78,10 +78,11 @@ A short list of work we own outright is worth more than a long list we cannot st
 ## Terms
 
 Free to use, on your own work, on as many machines as you like. Do not resell it or republish it
-as your own. That is the whole of it, in plain language rather than legal language.
+as your own. See the [source-available license](LICENSE) and [privacy note](PRIVACY.md).
 
 ## Problems
 
-Open an issue. `claude plugin validate --strict plugins/<name>` checks a local copy.
+Open an issue. Use a [private security report](SECURITY.md) for sensitive details.
+`claude plugin validate --strict plugins/<name>` checks a local copy.
 
 More, including the paid skills, at [skillfactory.prettyflyforai.com](https://skillfactory.prettyflyforai.com).
