@@ -25,6 +25,11 @@ Scaffold regression testing infrastructure in the current project.
 2. Generate `.promptfoo/promptfooconfig.yaml` (the path matters: `tests: "golden/*.yaml"` below resolves relative to this file, and `/regression-test run` looks for it here):
    ```yaml
    description: "Golden dataset regression tests"
+   # Without this, promptfoo has no prompt to send and every case scores an empty string.
+   # The vars come from the golden files that `/regression-test add` writes.
+   prompts:
+     - |
+       [{"role":"system","content":"{{system_prompt}}"},{"role":"user","content":"{{user_input}}"}]
    providers:
      - id: anthropic:messages:claude-sonnet-5
        config:

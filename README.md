@@ -29,12 +29,20 @@ source, so they cannot drift apart.
 
 You improved the prompt. Something else got worse, and you found out from a user.
 
-This turns your prompts into a golden test set you can re-run. Capture the cases that matter,
-run them after every change, and see which ones moved. It will not write your prompts. It tells
-you which change broke which case, before you ship it.
+It keeps a golden set of the cases that matter, committed next to your code, and shows which
+ones moved across your last five runs. One score tells you about today. A history tells you what
+your change did.
 
 Four commands: `init`, `add`, `run`, `report`. It scaffolds its own config, so there is nothing
 to wire up first.
+
+It exits clean when the set passes and non-zero when it does not, so a build can fail on a
+prompt the way it fails on a test. Checked by running it: a passing set exited `0`, and breaking
+one case took the same set to exit `100`, with a JSON result file written both times.
+
+There are good skills for authoring and running a single promptfoo eval, including one from
+promptfoo themselves. This one is for the other job: keeping the set, committing it, and reading
+the drift between runs.
 
 Needs [promptfoo](https://promptfoo.dev): `npm install -g promptfoo`.
 
