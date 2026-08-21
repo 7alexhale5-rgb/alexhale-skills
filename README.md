@@ -68,6 +68,17 @@ result files rather than typed.
 
 Needs [promptfoo](https://promptfoo.dev): `npm install -g promptfoo`.
 
+## Want the full release loop?
+
+Regression Test catches prompt changes that hurt old cases. Ship Stack adds three more jobs:
+
+- Set up release checks in a new project.
+- Find files, tests, settings, and docs a change may affect.
+- Check finished work against its plan and acceptance list.
+
+Ship Stack includes four original agent skills. It costs $179 once.
+[See Ship Stack](https://skillfactory.prettyflyforai.com/?source=github&campaign=ship-stack-launch#bundles).
+
 ## Why the list is short
 
 Every skill here passed a source and name review: we checked it against public projects with
@@ -87,4 +98,5 @@ as your own. See the [source-available license](LICENSE) and [privacy note](PRIV
 Open an issue. Use a [private security report](SECURITY.md) for sensitive details.
 `claude plugin validate --strict plugins/<name>` checks a local copy.
 
-More, including the paid skills, at [skillfactory.prettyflyforai.com](https://skillfactory.prettyflyforai.com).
+See the paid release workflow at
+[skillfactory.prettyflyforai.com](https://skillfactory.prettyflyforai.com/?source=github&campaign=ship-stack-launch#bundles).
